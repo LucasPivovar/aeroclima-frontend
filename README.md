@@ -1,6 +1,6 @@
 # AeroClima — Frontend
 
-Vue 3 + TypeScript + Vite, Vue Router, Vitest, lint e formatação. Página inicial com verificação da API e do banco. Funcionalidades de viagens serão construídas depois.
+Vue 3 + TypeScript + Vite, Vue Router, Pinia, Vitest, lint e formatação. Página mínima de boas-vindas, sem telas do produto. Funcionalidades de viagens serão construídas depois.
 
 **[Guia completo e explicação de cada arquivo](https://github.com/LucasPivovar/aeroclima-backend/blob/main/docs/GUIA.md).**
 
