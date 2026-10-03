@@ -1,6 +1,8 @@
 # AeroClima — Frontend
 
-Vue 3 + TypeScript + Vite, Vue Router, Pinia, Vitest, lint e formatação. Página inicial com verificação da API e do banco. Funcionalidades de viagens serão construídas depois.
+Vue 3 + TypeScript + Vite, Vue Router, Vitest, lint e formatação. Página inicial com verificação da API e do banco. Funcionalidades de viagens serão construídas depois.
+
+**[Guia completo e explicação de cada arquivo](https://github.com/LucasPivovar/aeroclima-backend/blob/main/docs/GUIA.md).**
 
 ## Rodar localmente
 
@@ -18,12 +20,12 @@ Na pasta do backend:
 
 ```powershell
 docker compose exec frontend npm run build
-docker compose exec frontend npm run test:unit
+docker compose exec frontend npm test
 docker compose exec frontend npm run lint
 ```
 
 ## Só com Node
 
-Node 24, `npm ci` e `npm run dev`. O proxy padrão aponta para http://localhost:3000. `npm run build`, `npm run test:unit` e `npm run lint` validam o projeto. Para trocar o proxy temporariamente no PowerShell: `$env:API_PROXY_TARGET = 'http://localhost:3000'`.
+Node 24, `npm ci` e `npm run dev`. O proxy padrão aponta para http://localhost:3000. `npm run build`, `npm test` e `npm run lint` validam o projeto. Para trocar o proxy temporariamente no PowerShell: `$env:API_PROXY_TARGET = 'http://localhost:3000'`.
 
 Dockerfile para desenvolvimento local. VPS, mapas e funcionamento offline serão preparados depois.
