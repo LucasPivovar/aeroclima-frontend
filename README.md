@@ -1,6 +1,6 @@
 # AeroClima — Frontend
 
-Vue 3 + TypeScript + Vite, Vue Router, Pinia, Vitest, lint e formatação. Página mínima de boas-vindas, sem telas do produto. Funcionalidades de viagens serão construídas depois.
+Vue 3 + TypeScript + Vite, Vue Router, Pinia, Vitest, lint e formatação. Tela com somente H1 AeroClima; main.ts faz fetch da saúde da API e mostra o resultado no console. Funcionalidades de viagens serão construídas depois.
 
 **[Guia completo e explicação de cada arquivo](https://github.com/LucasPivovar/aeroclima-backend/blob/main/docs/GUIA.md).**
 
@@ -29,3 +29,7 @@ docker compose exec frontend npm run lint
 Node 24, `npm ci` e `npm run dev`. O proxy padrão aponta para http://localhost:3000. `npm run build`, `npm test` e `npm run lint` validam o projeto. Para trocar o proxy temporariamente no PowerShell: `$env:API_PROXY_TARGET = 'http://localhost:3000'`.
 
 Dockerfile para desenvolvimento local. VPS, mapas e funcionamento offline serão preparados depois.
+
+## Base de mapas e offline
+
+MapLibre GL e idb instalados. src/services/maps.ts cria um mapa sob demanda quando vocês implementarem a tela e escolherem o estilo; src/services/offline.ts armazena registros no IndexedDB. Nenhum mapa aparece agora. Download de mapas, rotas offline e suas permissões ainda precisam ser implementados. Clima/busca/rotas têm clientes HTTP preparados no backend.
